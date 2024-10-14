@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class Employee {
 
-    private int empId;
-    private Set<Project> projects;
+    private final int empId;
+    private final Set<Project> projects;
 
     public Employee(int empId) {
         this.empId = empId;

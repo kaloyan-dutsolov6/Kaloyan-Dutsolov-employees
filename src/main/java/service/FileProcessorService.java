@@ -73,12 +73,12 @@ public class FileProcessorService {
 
         for (Project project1 : employee1.getProjects()) {
             for (Project project2 : employee2.getProjects()) {
-                if (project1.getProjectId() == (project2.getProjectId())) {
-                    long daysWorked = calculateDaysBetweenRange(project1.getDateFrom(), project1.getDateTo(),
-                            project2.getDateFrom(), project2.getDateTo());
+                if (project1.projectId() == (project2.projectId())) {
+                    long daysWorked = calculateDaysBetweenRange(project1.dateFrom(), project1.dateTo(),
+                            project2.dateFrom(), project2.dateTo());
 
                     if (daysWorked > 0) {
-                        ProjectWorkDays projectWork = new ProjectWorkDays(project1.getProjectId(), daysWorked);
+                        ProjectWorkDays projectWork = new ProjectWorkDays(project1.projectId(), daysWorked);
                         projectData.add(projectWork);
                     }
                 }

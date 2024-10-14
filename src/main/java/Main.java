@@ -49,12 +49,12 @@ public class Main {
                         COLUMN_PROJECT_ID, COLUMN_DAYS_WORKED}, 0);
 
         for (EmployeePairProjectWork employeePairProjectWork : commonProjects) {
-            for (ProjectWorkDays projectWorkDays : employeePairProjectWork.getProjectWorkDays()) {
+            for (ProjectWorkDays projectWorkDays : employeePairProjectWork.projectWorkDays()) {
                 model.addRow(new Object[]{
-                        employeePairProjectWork.getEmployee1Id(),
-                        employeePairProjectWork.getEmployee2Id(),
-                        projectWorkDays.getProjectId(),
-                        projectWorkDays.getDaysWorked()
+                        employeePairProjectWork.employee1Id(),
+                        employeePairProjectWork.employee2Id(),
+                        projectWorkDays.projectId(),
+                        projectWorkDays.daysWorked()
                 });
             }
         }
