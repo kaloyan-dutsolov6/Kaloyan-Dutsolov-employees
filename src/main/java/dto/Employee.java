@@ -6,10 +6,11 @@ import java.util.Set;
 public class Employee {
 
     private int empId;
-    private Set<Project> projects = new HashSet<>();
+    private Set<Project> projects;
 
     public Employee(int empId) {
         this.empId = empId;
+        this.projects = new HashSet<>();
     }
 
     public void addProject(Project project) {
